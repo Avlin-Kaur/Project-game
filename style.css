@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10152f, #252b59, #512b75);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    color: #72f1ff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #d5d8ff;
+    margin-bottom: 25px;
+}
+
+.screen {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.mode-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+button {
+    background: linear-gradient(135deg, #00c6ff, #7b61ff);
+    border: none;
+    padding: 13px 18px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+.settings {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.settings button,
+.game-buttons button {
+    font-size: 13px;
+    background: #303b70;
+}
+
+.high-score {
+    margin-top: 20px;
+    color: #ffe66d;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: #72f1ff;
+}
+
+.progress {
+    width: 100%;
+    height: 9px;
+    background: #35395f;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #00e5a8;
+    transition: width 0.3s;
+}
+
+#question-number {
+    margin-bottom: 15px;
+    color: #ffe66d;
+}
+
+.clue-box {
+    background: rgba(0,0,0,0.25);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #6875ca;
+}
+
+.clue-box h2 {
+    color: #72f1ff;
+}
+
+.clue-box p {
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.options button {
+    background: #333d72;
+    border: 1px solid #7984d7;
+    min-height: 55px;
+}
+
+.options button.correct {
+    background: #159b68;
+}
+
+.options button.wrong {
+    background: #bd354d;
+}
+
+.options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+#feedback {
+    font-weight: bold;
+    min-height: 25px;
+    margin-top: 15px;
+}
+
+#fun-fact {
+    color: #ffe66d;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#result-message {
+    margin: 20px 0;
+}
+
+#result-screen h3 {
+    color: #ffe66d;
+    margin: 15px;
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        font-size: 13px;
+    }
+}

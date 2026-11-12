@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Clue Master - Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>🧠 AI CLUE MASTER</h1>
+            <p>Think Smart. Solve Clues. Beat the AI!</p>
+        </header>
+
+        <section id="start-screen" class="screen">
+            <h2>Welcome, Clue Master!</h2>
+            <p>Choose your game mode and start guessing.</p>
+
+            <div class="mode-container">
+                <button onclick="startGame('easy')">Easy</button>
+                <button onclick="startGame('medium')">Medium</button>
+                <button onclick="startGame('hard')">Hard</button>
+                <button onclick="startGame('endless')">Endless</button>
+            </div>
+
+            <div class="settings">
+                <button onclick="toggleMusic()" id="music-btn">
+                    🎵 Music: ON
+                </button>
+                <button onclick="toggleSound()" id="sound-btn">
+                    🔊 Sound: ON
+                </button>
+            </div>
+
+            <p class="high-score">🏆 Best Score: <span id="best-score">0</span></p>
+        </section>
+
+        <section id="game-screen" class="screen hidden">
+            <div class="stats">
+                <span>❤️ Lives: <b id="lives">3</b></span>
+                <span>⭐ Score: <b id="score">0</b></span>
+                <span>⏱️ Time: <b id="timer">30</b></span>
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+            <p id="question-number">Question 1</p>
+
+            <div class="clue-box">
+                <h2>🤖 AI Clue</h2>
+                <p id="clue">Your clue will appear here.</p>
+            </div>
+
+            <h3>Choose the correct answer:</h3>
+
+            <div id="options" class="options"></div>
+
+            <p id="feedback"></p>
+            <p id="fun-fact"></p>
+
+            <div class="game-buttons">
+                <button onclick="pauseGame()" id="pause-btn">⏸ Pause</button>
+                <button onclick="backToHome()">🏠 Home</button>
+            </div>
+        </section>
+
+        <section id="result-screen" class="screen hidden">
+            <h2 id="result-title">Game Over!</h2>
+            <p id="result-message"></p>
+            <h3>⭐ Your Score: <span id="final-score">0</span></h3>
+            <p>🏆 Best Score: <span id="final-best">0</span></p>
+            <button onclick="backToHome()">Play Again</button>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
